@@ -14,9 +14,14 @@ function [callData, waveform, fs] = getCallTimestampsInteractive(filename)
 [waveform, fs] = audioread(filename);
 t = (0:length(waveform)-1)/fs;
 
+% If multichannel, select first channel only
+if size(waveform, 2) > 1
+    waveform = waveform(:, 1);
+end
+
 % Setup plot
 hFig = figure('Name', 'Interactive Call Picker');
-plot(t, waveform, 'k');
+plot(t, waveform, 'k'); % Plot only first channel
 xlabel('Time (s)');
 ylabel('Amplitude');
 title('Press "s" to start. "p"=pause, "r"=resume, "x"=exit');
