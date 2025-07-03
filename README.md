@@ -45,6 +45,8 @@ addpath('path_to/analyse_responsivity');
 ```
 
 ## Quick Start
+See the `examples` folder for the starting script.
+
 ```matlab
 % Create a BiosonarResponsivity object with an audio file, responsivity factor, and max call rate
 bsr = BiosonarResponsivity('path/to/audio.wav', 5, 180);
@@ -104,8 +106,6 @@ For questions or collaboration, please contact:
 
 Ravi Umadi
 
-## Status
-> **UNDER DEVELOPMENT — Check again soon**
 
 
 

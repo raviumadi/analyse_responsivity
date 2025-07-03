@@ -32,7 +32,7 @@ classdef BiosonarResponsivity < handle
             obj.t_call = [obj.callData.duration]';
         end
 
-        function analyzeResponsivity(obj)
+        function analyseResponsivity(obj)
             if isempty(obj.callTimes)
                 error('Call timestamps not defined. Run getCallTimestampsInteractive first.');
             end
@@ -41,7 +41,7 @@ classdef BiosonarResponsivity < handle
                 varargin{end+1} = obj.t_call;
             end
             varargin{end+1} = obj.c;
-            obj.results = analyse_responsivity_xyz(obj.callTimes, obj.kr, obj.RcMax, varargin{:});
+            obj.results = analyse_responsivity(obj.callTimes, obj.kr, obj.RcMax, varargin{:});
         end
 
         function summary(obj)
