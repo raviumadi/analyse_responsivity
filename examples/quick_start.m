@@ -1,9 +1,11 @@
 % Usage demo for BiosonarResponsivity class
 
-file = './data/BAT006.WAV'; % or load any file of your own. Also see provided sample data files.
-% file = './data/04-Sep-2021_20-39-10_fruityard_IN.wav';
-kr = 5;
-RcMax = 180;
+% file = './data/BAT006.WAV'; % or load any file of your own. Also see provided sample data files.
+% file = './data/14-Sep-2021_20-06-38_fruityard_IN.wav';
+file = './data/14-Sep-2021_21-44-39_fruityard_IN.wav';
+% file = './data/03-Sep-2021_20-39-00_fruityard_IN.wav';
+kr = 5; % Starting point
+RcMax = 200; % Starting point. Adjust according to your data
 % Create BiosonarResponsivity object with kr, RcMax
 bsr = BiosonarResponsivity(file, kr, RcMax);
 
@@ -25,4 +27,5 @@ bsr.plotRespCurve();
 % Plot IPI vs CR plot
 bsr.plotIPI();
 
+%%
 bsr.exportResults('results')
