@@ -1,35 +1,113 @@
 # BioSonar Responsivity Analysis Toolkit
-### UNDER DEVELOPMENT - Check again soon
-**See the following papers for the original descritpion of the methods and theory**
 
-[Biosonar Responsivity Sets the Stage for the Terminal Buzz](https://www.biorxiv.org/content/10.1101/2025.06.16.659925v1)
 
-[Temporal Precision Necessitates Wingbeat-Call Asynchrony in Actively Echolocating Bats](https://www.biorxiv.org/content/10.1101/2025.06.18.660328v1)
+This repository contains a MATLAB toolkit for analysing biosonar call timing and responsivity in echolocating animals, primarily bats. The toolkit includes interactive call selection, call timing analysis, visualisation, and an easy-to-use object-oriented interface.
 
-This repository contains MATLAB tools for analyzing biosonar call timing and responsivity in echolocating animals, including interactive call selection, call timing analysis, and visualization.
+---
+
+## Related Publications
+
+For detailed theoretical background and method descriptions, please refer to the following papers:
+
+- [Biosonar Responsivity Sets the Stage for the Terminal Buzz (2025)](https://www.biorxiv.org/content/10.1101/2025.06.16.659925v1)
+
+- [Temporal Precision Necessitates Wingbeat-Call Asynchrony in Actively Echolocating Bats (2025)](https://www.biorxiv.org/content/10.1101/2025.06.18.660328v1)
+
+---
 
 ## Features
--	Interactive Call Picker: GUI tool to select call timestamps and durations from audio waveforms with adjustable markers.
--	Responsivity Analysis: Calculate inter-phonation intervals (IPI), echo delays (Ta), biological reaction times (Tb), and responsivity metrics.
--	Visualization: Plot call rates, buzz readiness, and call timing summaries.
--	Class Interface: BiosonarResponsivity class encapsulates audio loading, interactive call selection, analysis, plotting, and result export.
+
+- **Interactive Call Picker**  
+  An intuitive GUI for selecting call timestamps and durations directly from audio waveforms. Users can adjust call boundaries, zoom, undo/redo, and mark precise call peaks.
+
+- **Responsivity Analysis**  
+  Computes key temporal parameters such as inter-phonation intervals (IPI), echo delays $$T_a$$, biological reaction times $$T_b$$, and the responsivity metric $$\mathcal{R}$$ that captures call timing precision dynamics.
+
+- **Visualization Tools**  
+  Generates informative plots including call rate over time, buzz readiness markers, call duration annotations, and responsivity curves with highlighted inflexion points.
+
+- **Object-Oriented Interface**  
+  The `BiosonarResponsivity` class integrates audio loading, interactive call selection, analysis, plotting, and export functionalities into a streamlined workflow.
+
+---
+
+## Installation
+
+Clone or download this repository and add its folder to your MATLAB path.
+
+```bash
+git clone git@github.com:raviumadi/analyse_responsivity.git
+```
+Then, in MATLAB:
 
 ```matlab
-% Create object and load audio
-bsr = BiosonarResponsivity('path/to/audio.wav', kr_value, RcMax_value);
+addpath('path_to/analyse_responsivity');
+```
 
-% Select calls interactively
+## Quick Start
+```matlab
+% Create a BiosonarResponsivity object with an audio file, responsivity factor, and max call rate
+bsr = BiosonarResponsivity('path/to/audio.wav', 5, 180);
+
+% Launch interactive GUI to select calls
 bsr.getCallTimestampsInteractive();
 
-% Run responsivity analysis
-bsr.analyzeResponsivity();
+% Perform responsivity analysis on selected calls
+bsr.analyseResponsivity();
 
-% View summary in command window
+% View analysis summary in the MATLAB console
 bsr.summary();
 
-% Plot results
+% Visualise the responsivity curve and detailed call timing results
 bsr.plotResponsivityCurve();
 bsr.plotDetailedResults();
 
-% Export results and figures to folder
+% Plot temporal precision curves
+bsr.plotIPI();
+
+% Export all plots and results to a specified folder
 bsr.exportResults('path/to/save/folder');
+
+```
+
+## Workflow Details
+###	Interactive Call Selection
+The GUI allows manual annotation of echolocation calls on the waveform plot. Use keyboard commands to start, pause, resume, adjust boundaries, undo, and exit.
+
+### Responsivity Analysis
+Once calls are selected, the analysis computes:
+
+- IPIs and instantaneous call rates
+- Echo delay $$T_a$$ estimated from IPIs and the responsivity scaling factor
+- Biological reaction time $$T_b$$ as a proportion of $$T_a$$
+- Responsivity metric $$\mathcal{R}$$, quantifying call timing adjustments
+- Buzz readiness, the point of maximal responsivity, indicates the approach to terminal buzz
+
+###	Visualization
+
+Plots highlight call rate dynamics over time, call timings with duration annotations, and the responsivity curve with key points for intuitive interpretation.
+
+### Exporting Results
+All analysis outputs, figures, and metadata can be saved to organised folders for documentation and further study.
+
+## Requirements
+- MATLAB R2019b or later (compatible with earlier versions but not tested)
+- No additional toolboxes are required.
+
+## Contact
+
+For questions or collaboration, please contact:
+
+Ravi Umadi
+
+## Status
+> **UNDER DEVELOPMENT — Check again soon**
+
+
+
+
+
+
+
+
+
