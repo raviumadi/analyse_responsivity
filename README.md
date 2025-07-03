@@ -1,4 +1,4 @@
-# BioSonar Responsivity Analysis Toolkit
+# Biosonar Responsivity Analysis Toolkit
 
 
 This repository contains a MATLAB toolkit for analysing biosonar call timing and responsivity in echolocating animals, primarily bats. The toolkit includes interactive call selection, call timing analysis, visualisation, and an easy-to-use object-oriented interface.
