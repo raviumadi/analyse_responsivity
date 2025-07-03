@@ -118,7 +118,9 @@ This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 Int
 
 If you wish to develop the tool further, perhaps including a full GUI, please feel free to fork. Alternatively, for added examples, your own versions of analyses, do send pull requests.
 
-*With great speed comes greater responsivity*
+
+
+> With great speed comes greater responsivity
 
 
 
