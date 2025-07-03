@@ -18,7 +18,7 @@ For detailed theoretical background and method descriptions, please refer to the
 ## Features
 
 - **Interactive Call Picker**  
-  An intuitive GUI for selecting call timestamps and durations directly from audio waveforms. Users can adjust call boundaries, zoom, undo/redo, and mark precise call peaks.
+  An intuitive GUI for selecting call timestamps and durations directly from audio waveforms. Users can adjust call boundaries, zoom, undo/redo, and mark precise call peaks. (See below).
 
 - **Responsivity Analysis**  
   Computes key temporal parameters such as inter-pulse intervals (IPI), echo delays $$T_a$$, biological reaction times $$T_b$$, and the responsivity metric $$\mathcal{R}$$ that captures call timing precision dynamics.
@@ -74,7 +74,14 @@ bsr.exportResults('path/to/save/folder');
 
 ## Workflow Details
 ###	Interactive Call Selection
-The GUI allows manual annotation of echolocation calls on the waveform plot. Use keyboard commands to start, pause, resume, adjust boundaries, undo, and exit.
+The GUI allows manual annotation of echolocation calls on the waveform plot. Use keyboard commands to start, pause, resume, adjust boundaries, undo, and exit. 
+
+- `s` - Start annotation
+- `p` - Pause. You can resize, zoom in/out while paused. **Unselect the plot tool before resuming**
+- `r` - Resume annotation
+- `x` - Finish and exit annotation
+- `uparrow` `downarrow`  - Resize vertical call boundary.
+- `leftarrow` `rightarrow` Move call boundary left/right.
 
 ### Responsivity Analysis
 
