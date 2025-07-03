@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the following metadata."
+title: "Biosonar Responsivity Analysis Toolkit"
+version: "v1.0.0"
+doi: "10.5281/zenodo.XXXXXXX"  # Placeholder. See the repo for the updated citation.
+authors:
+  - family-names: Umadi
+    given-names: Ravi
+    orcid: "https://orcid.org/0000-0003-3867-1769"  # Replace with your ORCID if available
+date-released: 2025-07-03
+url: "https://github.com/raviumadi/analyse_responsivity"
+license: "CC BY-NC 4.0"
+abstract: |
+  analyse_responsivity is a MATLAB toolbox for analysing biosonar call timing and responsivity in echolocating animals. It provides tools for interactive call selection, temporal analysis, and visualisation of biosonar behaviour.
+keywords:
+  - biosonar
+  - responsivity
+  - echolocation
+  - MATLAB
+  - signal processing
