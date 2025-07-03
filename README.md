@@ -94,6 +94,10 @@ All analysis outputs, figures, and metadata can be saved to organised folders fo
 - MATLAB R2019b or later (compatible with earlier versions but not tested)
 - No additional toolboxes are required.
 
+## License
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
 ## Contact
 
 For questions or collaboration, please contact:
