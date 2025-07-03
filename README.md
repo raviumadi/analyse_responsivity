@@ -45,7 +45,7 @@ addpath('path_to/analyse_responsivity');
 ```
 
 ## Quick Start
-See the `examples` folder for the starting script.
+See the `examples` folder for the starting script. Check the [tutorial](tutorial/responsivity_tutorial.pdf) for a detailed description.
 
 ```matlab
 % Create a BiosonarResponsivity object with an audio file, responsivity factor, and max call rate
@@ -73,6 +73,7 @@ bsr.exportResults('path/to/save/folder');
 ```
 
 ## Workflow Details
+
 ###	Interactive Call Selection
 The GUI allows manual annotation of echolocation calls on the waveform plot. Use keyboard commands to start, pause, resume, adjust boundaries, undo, and exit. 
 
