@@ -83,6 +83,8 @@ The GUI allows manual annotation of echolocation calls on the waveform plot. Use
 - `x` - Finish and exit annotation
 - `uparrow` `downarrow`  - Resize vertical call boundary.
 - `leftarrow` `rightarrow` Move call boundary left/right.
+- `y` - Remove the last marking.
+- `ctrl/cmd+z` - undo last change.
 
 ### Responsivity Analysis
 
