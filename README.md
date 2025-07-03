@@ -74,7 +74,16 @@ bsr.exportResults('path/to/save/folder');
 
 ## Workflow Details
 
+---
+
+### Special Note
+
+An underlying requirement for the most reliable analysis is a complete call sequence collected in a direct pursuit setting. The field data provided is highly variable, and the regions of buzz readiness do not correspond to direct target pursuit; hence, interpreting the $$T_{b^*}$$ must be approached with caution. 
+
+----
+
 ###	Interactive Call Selection
+
 The GUI allows manual annotation of echolocation calls on the waveform plot. Use keyboard commands to start, pause, resume, adjust boundaries, undo, and exit. 
 
 - `s` - Start annotation
