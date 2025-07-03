@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the following metadata."
 title: "Biosonar Responsivity Analysis Toolkit"
 version: "v1.0.0"
-doi: "10.5281/zenodo.XXXXXXX"  # Placeholder. See the repo for the updated citation.
+doi: "10.5281/zenodo.15801316"  # Placeholder. See the repo for the updated citation.
 authors:
   - family-names: Umadi
     given-names: Ravi
